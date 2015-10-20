@@ -92,9 +92,7 @@
   <div id="user_nav">
     <% if current_user %>
       Signed in as <strong><%= current_user.email %></strong>!
-      
-    <% else %>
-      <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+      <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
     <% end %>
   </div>
   <p class="notice"><%= notice %></p>
